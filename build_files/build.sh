@@ -41,7 +41,6 @@ dnf5 install -y \
     bridge-utils \
     clang \
     clang-tools-extra \
-    coolercontrol \
     emacs \
     libcurl-devel \
     llvm \
