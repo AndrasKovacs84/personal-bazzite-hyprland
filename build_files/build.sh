@@ -58,6 +58,10 @@ dnf5 install -y \
     zathura \
     zathura-plugins-all
 
+dnf5 -y copr enable codifryed/CoolerControl
+dnf5 -y install coolercontrol coolercontrold
+dnf5 -y copr disable codifryed/CoolerControl
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
@@ -66,5 +70,5 @@ dnf5 install -y \
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
-
 systemctl enable podman.socket
+systemctl enable coolercontrold.service
