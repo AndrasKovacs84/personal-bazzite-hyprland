@@ -17,8 +17,46 @@ rm -f \
   /usr/share/wayland-sessions/plasma-steamos-wayland-oneshot.desktop \
   /usr/share/xsessions/plasma-steamos-oneshot.desktop || true
 
+# setup hyprland from COPR
+dnf5 -y copr enable solopasha/hyprland
+dnf5 -y install			\
+	hyprland			\
+	hyprpaper			\
+	hyprpicker			\
+	hypridle			\
+	hyprlock			\
+	hyprsunset			\
+	hyprpolkitagent		\
+	hyprsysteminfo		\
+	hyprpanel			\
+	qt6ct-kde			\
+	hyprland-qt-support	\
+	hyprland-qtutils
+dnf5 -y copr disable solopasha/hyprland
+
 # this installs a package from fedora repos
-dnf5 install -y tmux
+dnf5 install -y \
+    alacritty \
+    bear \
+    bridge-utils \
+    clang \
+    clang-tools-extra \
+    coolercontrol \
+    emacs \
+    libcurl-devel \
+    llvm \
+    ncurses-devel \
+    ninja-build \
+    python3.11 \
+    python3.11-devel \
+    readline-devel \
+    ripgrep \
+    tmux \
+    virt-install \
+    virt-manager \
+    wofi \
+    zathura \
+    zathura-plugins-all
 
 # Use a COPR Example:
 #
