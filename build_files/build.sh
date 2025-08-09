@@ -42,6 +42,7 @@ dnf5 install -y \
     clang \
     clang-tools-extra \
     emacs \
+    kitty \
     libcurl-devel \
     llvm \
     ncurses-devel \
