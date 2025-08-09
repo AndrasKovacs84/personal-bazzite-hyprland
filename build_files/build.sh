@@ -51,6 +51,7 @@ dnf5 install -y \
     python3.11-devel \
     readline-devel \
     ripgrep \
+    stow \
     tmux \
     virt-install \
     virt-manager \
