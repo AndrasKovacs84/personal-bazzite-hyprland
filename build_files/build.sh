@@ -72,3 +72,12 @@ dnf5 -y copr disable codifryed/CoolerControl
 #### Example for enabling a System Unit File
 systemctl enable podman.socket
 systemctl enable coolercontrold.service
+
+# copy the script into the image
+install -Dm755 /tmp/files/scripts/post-install-user.sh /usr/libexec/post-install-user.sh
+
+# install the user-level systemd unit
+install -Dm644 /tmp/files/systemd/user/post-install.service /usr/lib/systemd/user/post-install.service
+
+# enable for every user so it runs at login
+systemctl --global enable post-install.service
