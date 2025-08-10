@@ -38,6 +38,7 @@ dnf5 -y copr disable solopasha/hyprland
 dnf5 install -y \
     alacritty \
     bear \
+    brave-browser \
     bridge-utils \
     clang \
     clang-tools-extra \
