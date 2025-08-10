@@ -38,7 +38,6 @@ dnf5 -y copr disable solopasha/hyprland
 dnf5 install -y \
     alacritty \
     bear \
-    brave-browser \
     bridge-utils \
     clang \
     clang-tools-extra \
@@ -62,6 +61,11 @@ dnf5 install -y \
 dnf5 -y copr enable codifryed/CoolerControl
 dnf5 -y install coolercontrol coolercontrold
 dnf5 -y copr disable codifryed/CoolerControl
+
+dnf5 install dnf5-plugins-core
+dnf5 config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+dnf5 install brave-browser
 
 # Use a COPR Example:
 #
