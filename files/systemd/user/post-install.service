@@ -1,0 +1,12 @@
+[Unit]
+Description=Run user post-install tasks after login (dotfiles, brew, Doom, etc.)
+After=default.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/post-install-user.sh
+# ensure we have a usable PATH for user tools like brew/doom
+Environment=PATH=%h/.local/bin:%h/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/bin:/usr/bin:/usr/local/bin
+
+[Install]
+WantedBy=default.target
