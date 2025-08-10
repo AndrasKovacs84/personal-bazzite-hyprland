@@ -52,7 +52,6 @@ dnf5 install -y \
     readline-devel \
     ripgrep \
     stow \
-    tmux \
     virt-install \
     virt-manager \
     wofi \
