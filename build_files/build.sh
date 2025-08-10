@@ -73,12 +73,9 @@ dnf5 -y copr disable codifryed/CoolerControl
 systemctl enable podman.socket
 systemctl enable coolercontrold.service
 
-SRC="/ctx/files"
-[ -d "$SRC" ] || SRC="/tmp/files"
-
 # install script + user unit from your repo
-install -Dm755 "$SRC/scripts/post-install-user.sh" /usr/libexec/post-install-user.sh
-install -Dm644 "$SRC/systemd/user/post-install.service" /usr/lib/systemd/user/post-install.service
+install -Dm755 "ctx/scripts/post-install-user.sh" /usr/libexec/post-install-user.sh
+install -Dm644 "ctx/systemd/user/post-install.service" /usr/lib/systemd/user/post-install.service
 
 # enable for all users
 systemctl --global enable post-install.service
