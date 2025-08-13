@@ -48,6 +48,7 @@ dnf5 install -y \
     llvm \
     ncurses-devel \
     ninja-build \
+    pavucontrol-qt \
     python3.11 \
     python3.11-devel \
     readline-devel \
@@ -55,6 +56,7 @@ dnf5 install -y \
     stow \
     virt-install \
     virt-manager \
+    waybar \
     wofi \
     zathura \
     zathura-plugins-all
