@@ -58,6 +58,7 @@ dnf5 install -y \
     virt-manager \
     waybar \
     wofi \
+    xdg-desktop-portal \
     xdg-desktop-portal-hyprland \
     zathura \
     zathura-plugins-all
