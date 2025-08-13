@@ -41,6 +41,7 @@ dnf5 install -y \
     bridge-utils \
     clang \
     clang-tools-extra \
+    doublecmd-qt6 \
     emacs \
     kitty \
     libcurl-devel \
