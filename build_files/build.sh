@@ -55,6 +55,7 @@ dnf5 install -y \
     readline-devel \
     ripgrep \
     stow \
+    swww \
     virt-install \
     virt-manager \
     waybar \
