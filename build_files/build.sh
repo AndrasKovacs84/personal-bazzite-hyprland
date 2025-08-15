@@ -30,6 +30,7 @@ dnf5 -y install			\
 	hyprsysteminfo		\
 	hyprpanel			\
 	qt6ct-kde			\
+  swww \
 	hyprland-qt-support	\
 	hyprland-qtutils
 dnf5 -y copr disable solopasha/hyprland
@@ -55,7 +56,6 @@ dnf5 install -y \
     readline-devel \
     ripgrep \
     stow \
-    swww \
     virt-install \
     virt-manager \
     waybar \
