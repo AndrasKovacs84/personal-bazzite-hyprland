@@ -25,6 +25,8 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build.sh && \
     ostree container commit
     
+RUN curl -o /etc/yum.repos.d/ublue-os-terra.repo https://copr.fedorainfracloud.org/coprs/ublue-os/terra/repo/fedora-$(rpm -E %fedora)/ublue-os-terra-fedora-$(rpm -E %fedora).repo
+
 RUN rpm-ostree install \
     neovide \
 && rpm-ostree cleanup -m
