@@ -25,6 +25,10 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build.sh && \
     ostree container commit
     
+RUN rpm-ostree install \
+    neovide \
+&& rpm-ostree cleanup -m
+
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint

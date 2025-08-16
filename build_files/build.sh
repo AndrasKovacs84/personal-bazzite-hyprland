@@ -51,7 +51,6 @@ dnf5 install -y \
     ncurses-devel \
     neovim \
     python3-neovim \
-    neovide \
     ninja-build \
     pavucontrol-qt \
     python3.11 \
@@ -63,7 +62,6 @@ dnf5 install -y \
     virt-manager \
     waybar \
     wofi \
-    xdg-desktop-portal \
     xdg-desktop-portal-hyprland \
     zathura \
     zathura-plugins-all
