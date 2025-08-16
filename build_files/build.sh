@@ -49,6 +49,9 @@ dnf5 install -y \
     libcurl-devel \
     llvm \
     ncurses-devel \
+    neovim \
+    python3-neovim \
+    neovide \
     ninja-build \
     pavucontrol-qt \
     python3.11 \
