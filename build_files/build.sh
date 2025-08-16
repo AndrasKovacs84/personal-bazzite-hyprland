@@ -41,6 +41,7 @@ dnf5 install -y \
     bear \
     blueman \
     bridge-utils \
+    cargo \
     clang \
     clang-tools-extra \
     doublecmd-qt6 \
