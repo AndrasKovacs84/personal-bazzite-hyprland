@@ -58,6 +58,7 @@ dnf5 install -y \
     python3.11-devel \
     readline-devel \
     ripgrep \
+    rust \
     stow \
     virt-install \
     virt-manager \
