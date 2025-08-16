@@ -46,6 +46,8 @@ dnf5 install -y \
     clang-tools-extra \
     doublecmd-qt6 \
     emacs \
+    fontconfig-devel \
+    freetype-devel \
     kitty \
     libcurl-devel \
     llvm \
