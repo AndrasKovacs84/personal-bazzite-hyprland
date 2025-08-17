@@ -48,8 +48,10 @@ dnf5 install -y \
     emacs \
     fontconfig-devel \
     freetype-devel \
+    gnome-keyring \
     kitty \
     libcurl-devel \
+    libsecret \
     llvm \
     ncurses-devel \
     neovim \
