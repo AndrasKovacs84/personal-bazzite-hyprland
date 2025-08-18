@@ -24,7 +24,11 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh && \
     ostree container commit
-    
+
+RUN curl -sL -o /etc/yum.repos.d/swaync.repo \
+    https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-$(rpm -E %fedora)/erikreider-SwayNotificationCenter-fedora-$(rpm -E %fedora).repo
+
+RUN rpm-ostree install SwayNotificationCenter && rpm-ostree cleanup -m
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
