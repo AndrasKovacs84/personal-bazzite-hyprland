@@ -60,6 +60,7 @@ dnf5 install -y \
     pavucontrol-qt \
     python3.11 \
     python3.11-devel \
+    pywal \
     readline-devel \
     ripgrep \
     rust \
