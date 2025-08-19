@@ -17,6 +17,12 @@ rm -f \
   /usr/share/wayland-sessions/plasma-steamos-wayland-oneshot.desktop \
   /usr/share/xsessions/plasma-steamos-oneshot.desktop || true
 
+# Fix for a known issue, might not be needed at some point in the future
+# https://github.com/ErikReider/SwayNotificationCenter/issues/581
+dnf5 -y copr enable erikreider/SwayNotificationCenter
+dnf5 -y install gtk4-layer-shell-1.1.1-1.fc42.x86_64
+dnf5 -y copr disable erikreider/SwayNotificationCenter
+
 # setup hyprland from COPR
 dnf5 -y copr enable solopasha/hyprland
 dnf5 -y install			\
@@ -75,12 +81,6 @@ dnf5 install -y \
 dnf5 -y copr enable codifryed/CoolerControl
 dnf5 -y install coolercontrol coolercontrold
 dnf5 -y copr disable codifryed/CoolerControl
-
-# Fix for a known issue, might not be needed at some point in the future
-# https://github.com/ErikReider/SwayNotificationCenter/issues/581
-dnf5 -y copr enable erikreider/SwayNotificationCenter
-dnf5 -y install gtk4-layer-shell-1.1.1-1.fc42.x86_64
-dnf5 -y copr disable erikreider/SwayNotificationCenter
 
 # Use a COPR Example:
 #
