@@ -76,6 +76,12 @@ dnf5 -y copr enable codifryed/CoolerControl
 dnf5 -y install coolercontrol coolercontrold
 dnf5 -y copr disable codifryed/CoolerControl
 
+# Fix for a known issue, might not be needed at some point in the future
+# https://github.com/ErikReider/SwayNotificationCenter/issues/581
+dnf5 -y copr enable erikreider/SwayNotificationCenter
+dnf5 -y install gtk4-layer-shell
+dnf5 -y copr disable erikreider/SwayNotificationCenter
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
