@@ -55,6 +55,7 @@ dnf5 install -y \
     fontconfig-devel \
     freetype-devel \
     gnome-keyring \
+    imagemagick \
     kitty \
     libcurl-devel \
     libsecret \
