@@ -25,7 +25,7 @@ dnf5 -y copr disable erikreider/SwayNotificationCenter
 
 dnf5 -y copr enable dejan/lazygit
 dnf5 -y install lazygit
-dnf5 -y copr enable dejan/lazygit
+dnf5 copr enable dejan/lazygit
 
 # setup hyprland from COPR
 dnf5 -y copr enable solopasha/hyprland
@@ -40,7 +40,7 @@ dnf5 -y install			\
 	hyprsysteminfo		\
 	hyprpanel			\
 	qt6ct-kde			\
-  swww \
+    swww \
 	hyprland-qt-support	\
 	hyprland-qtutils
 dnf5 -y copr disable solopasha/hyprland
