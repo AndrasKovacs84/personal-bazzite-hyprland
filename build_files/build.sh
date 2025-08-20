@@ -23,6 +23,10 @@ dnf5 -y copr enable erikreider/SwayNotificationCenter
 dnf5 -y install gtk4-layer-shell-1.1.1-1.fc42.x86_64
 dnf5 -y copr disable erikreider/SwayNotificationCenter
 
+dnf5 -y copr enable dejan/lazygit
+dnf5 -y install lazygit
+dnf5 -y copr enable dejan/lazygit
+
 # setup hyprland from COPR
 dnf5 -y copr enable solopasha/hyprland
 dnf5 -y install			\
