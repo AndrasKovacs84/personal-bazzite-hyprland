@@ -21,7 +21,8 @@ rm -f \
 # Install personal wlogout fork
 VERSION="v1.0.0"
 URL="https://github.com/AndrasKovacs84/wlogout/releases/download/${VERSION}/wlogout"
-DEST_DIR="/usr/bin"
+MOUNT_NAME="ctx"
+DEST_DIR="${MOUNT_NAME}/usr/bin"
 DEST_PATH="${DEST_DIR}/wlogout"
 # Download and install
 echo "Downloading wlogout ${VERSION}..."
