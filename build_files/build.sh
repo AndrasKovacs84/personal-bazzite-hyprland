@@ -40,7 +40,7 @@ dnf5 -y install			\
 	hyprsysteminfo		\
 	hyprpanel			\
 	qt6ct-kde			\
-    swww \
+    swww                \
 	hyprland-qt-support	\
 	hyprland-qtutils
 dnf5 -y copr disable solopasha/hyprland
@@ -79,7 +79,6 @@ dnf5 install -y \
     virt-install \
     virt-manager \
     waybar \
-    wlogout \
     wofi \
     xdg-desktop-portal-hyprland \
     zathura \
