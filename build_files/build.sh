@@ -20,7 +20,7 @@ rm -f \
 # Fix for a known issue, might not be needed at some point in the future
 # https://github.com/ErikReider/SwayNotificationCenter/issues/581
 dnf5 -y copr enable erikreider/SwayNotificationCenter
-dnf5 -y install gtk4-layer-shell-1.1.1-1.fc42.x86_64
+dnf5 -y install gtk4-layer-shell
 dnf5 -y copr disable erikreider/SwayNotificationCenter
 
 dnf5 -y copr enable dejan/lazygit
@@ -64,6 +64,7 @@ dnf5 install -y \
     libcurl-devel \
     libsecret \
     llvm \
+    meson \
     ncurses-devel \
     neovim \
     python3-neovim \
