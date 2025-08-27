@@ -28,7 +28,7 @@ DEST_PATH="${DEST_DIR}/wlogout"
 echo "Downloading wlogout ${VERSION}..."
 curl -L -o wlogout "${URL}"
 chmod +x wlogout
-sudo mv wlogout "${DEST_PATH}"
+mv wlogout "${DEST_PATH}"
 echo "Installed wlogout to ${DEST_PATH}"
 
 # Fix for a known issue, might not be needed at some point in the future
