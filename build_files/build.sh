@@ -17,6 +17,19 @@ rm -f \
   /usr/share/wayland-sessions/plasma-steamos-wayland-oneshot.desktop \
   /usr/share/xsessions/plasma-steamos-oneshot.desktop || true
 
+
+# Install personal wlogout fork
+VERSION="v1.0.0"
+URL="https://github.com/AndrasKovacs84/wlogout/releases/download/${VERSION}/wlogout"
+DEST_DIR="/usr/bin"
+DEST_PATH="${DEST_DIR}/wlogout"
+# Download and install
+echo "Downloading wlogout ${VERSION}..."
+curl -L -o wlogout "${URL}"
+chmod +x wlogout
+sudo mv wlogout "${DEST_PATH}"
+echo "Installed wlogout to ${DEST_PATH}"
+
 # Fix for a known issue, might not be needed at some point in the future
 # https://github.com/ErikReider/SwayNotificationCenter/issues/581
 dnf5 -y copr enable erikreider/SwayNotificationCenter
