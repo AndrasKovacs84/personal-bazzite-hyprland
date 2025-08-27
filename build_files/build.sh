@@ -107,7 +107,7 @@ install -Dm644 "ctx/files/systemd/user/post-install.service" /usr/lib/systemd/us
 VERSION="v1.0.0"
 URL="https://github.com/AndrasKovacs84/wlogout/releases/download/${VERSION}/wlogout"
 MOUNT_NAME="ctx"
-DEST_DIR="${MOUNT_NAME}/usr/bin"
+DEST_DIR="/usr/bin"
 DEST_PATH="${DEST_DIR}/wlogout"
 # Download and install
 echo "Downloading wlogout ${VERSION}..."
