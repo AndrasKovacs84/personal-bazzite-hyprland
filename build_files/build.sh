@@ -105,7 +105,7 @@ install -Dm644 "ctx/files/systemd/user/post-install.service" /usr/lib/systemd/us
 
 # Install personal wlogout fork
 VERSION=$(curl -s https://api.github.com/repos/AndrasKovacs84/wlogout/releases/latest | grep tag_name | head -n 1 | sed -E 's/.*"([^"]+)".*/\1/')
-ZIP_URL="https://github.com/AndrasKovacs84/wlogout/releases/download/${VERSION}/wlogout"
+ZIP_URL="https://github.com/AndrasKovacs84/wlogout/releases/download/${VERSION}/wlogout.zip"
 
 TMP_DIR=$(mktemp -d)
 INSTALL_BIN_DIR="/usr/bin"
