@@ -104,16 +104,29 @@ install -Dm755 "ctx/files/scripts/post-install-user.sh" /usr/libexec/post-instal
 install -Dm644 "ctx/files/systemd/user/post-install.service" /usr/lib/systemd/user/post-install.service
 
 # Install personal wlogout fork
-VERSION="v1.0.0"
-URL="https://github.com/AndrasKovacs84/wlogout/releases/download/${VERSION}/wlogout"
-DEST_DIR="/usr/bin"
-DEST_PATH="${DEST_DIR}/wlogout"
+VERSION=$(curl -s https://api.github.com/repos/AndrasKovacs84/wlogout/releases/latest | grep tag_name | head -n 1 | sed -E 's/.*"([^"]+)".*/\1/')
+ZIP_URL="https://github.com/AndrasKovacs84/wlogout/releases/download/${VERSION}/wlogout"
+
+TMP_DIR=$(mktemp -d)
+INSTALL_BIN_DIR="/usr/bin"
+INSTALL_ASSETS_DIR="/usr/local/share/wlogout/icons"
+
 # Download and install
 echo "Downloading wlogout ${VERSION}..."
-curl -L -o wlogout "${URL}"
-chmod +x wlogout
-mv wlogout "${DEST_PATH}"
-echo "Installed wlogout to ${DEST_PATH}"
+curl -L -o "${TMP_DIR}/wlogout.zip" "${ZIP_URL}"
+
+echo "Unpacking..."
+unzip -q "${TMP_DIR}/wlogout.zip" -d "${TMP_DIR}"
+
+chmod +x "${TMP_DIR}/wlogout"
+mv "${TMP_DIR}wlogout" "${INSTALL_BIN_DIR}"
+echo "Installed wlogout to ${INSTALL_BIN_DIR}"
+
+mkdir -p "${INSTALL_ASSETS_DIR}"
+cp -r "${TMP_DIR}/assets/"* "${INSTALL_ASSETS_DIR}"
+echo "Installed icons to ${INSTALL_ASSETS_DIR}"
+
+rm -rf "${TMP_DIR}"
 
 # enable for all users
 systemctl --global enable post-install.service
