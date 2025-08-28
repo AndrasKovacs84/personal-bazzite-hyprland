@@ -119,7 +119,7 @@ echo "Unpacking..."
 unzip -q "${TMP_DIR}/wlogout.zip" -d "${TMP_DIR}"
 
 chmod +x "${TMP_DIR}/wlogout"
-mv "${TMP_DIR}wlogout" "${INSTALL_BIN_DIR}"
+mv "${TMP_DIR}/wlogout" "${INSTALL_BIN_DIR}"
 echo "Installed wlogout to ${INSTALL_BIN_DIR}"
 
 mkdir -p "${INSTALL_ASSETS_DIR}"
