@@ -109,7 +109,7 @@ ZIP_URL="https://github.com/AndrasKovacs84/wlogout/releases/download/${VERSION}/
 
 TMP_DIR=$(mktemp -d)
 INSTALL_BIN_DIR="/usr/bin"
-INSTALL_ASSETS_DIR="/usr/local/share/wlogout/icons"
+INSTALL_ASSETS_DIR="/usr/share/wlogout/icons"
 
 # Download and install
 echo "Downloading wlogout ${VERSION}..."
