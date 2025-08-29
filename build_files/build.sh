@@ -39,6 +39,7 @@ dnf5 -y install			\
 	hyprpolkitagent		\
 	hyprsysteminfo		\
 	hyprpanel			\
+	hyprshot            \
 	qt6ct-kde			\
     swww                \
 	hyprland-qt-support	\
