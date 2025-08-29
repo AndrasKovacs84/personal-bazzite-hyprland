@@ -59,6 +59,7 @@ dnf5 install -y \
     fontconfig-devel \
     freetype-devel \
     gnome-keyring \
+    gnome-keyring-pam \
     ImageMagick \
     kitty \
     libcurl-devel \
