@@ -77,6 +77,7 @@ dnf5 install -y \
     readline-devel \
     ripgrep \
     rust \
+    splix \
     stow \
     virt-install \
     virt-manager \
