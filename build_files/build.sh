@@ -40,10 +40,10 @@ dnf5 -y install			\
 	hyprsysteminfo		\
 	hyprpanel			\
 	hyprshot            \
-	qt6ct-kde			\
+	# qt6ct-kde			\
     swww                \
-	hyprland-qt-support	\
-	hyprland-qtutils
+	# hyprland-qt-support	\
+	# hyprland-qtutils
 dnf5 -y copr disable solopasha/hyprland
 
 # this installs a package from fedora repos
