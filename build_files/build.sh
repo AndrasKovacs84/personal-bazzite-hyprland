@@ -36,8 +36,8 @@ dnf5 -y install			\
 	hypridle			\
 	hyprlock			\
 	hyprsunset			\
-	hyprpolkitagent		\
-	hyprsysteminfo		\
+	# hyprpolkitagent		\
+	# hyprsysteminfo		\
 	hyprpanel			\
 	hyprshot            \
 	# qt6ct-kde			\
