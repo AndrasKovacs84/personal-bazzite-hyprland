@@ -29,21 +29,24 @@ dnf5 copr enable dejan/lazygit
 
 # setup hyprland from COPR
 dnf5 -y copr enable solopasha/hyprland
-dnf5 -y install			\
-	hyprland			\
-	hyprpaper			\
-	hyprpicker			\
-	hypridle			\
-	hyprlock			\
-	hyprsunset			\
-	# hyprpolkitagent		\
-	# hyprsysteminfo		\
-	# hyprpanel			\
-	hyprshot            \
-	# qt6ct-kde			\
-    swww                \
-	# hyprland-qt-support	\
-	# hyprland-qtutils
+pkgs=(
+  hyprland
+  hyprpaper
+  hyprpicker
+  hypridle
+  hyprlock
+  hyprsunset
+  # hyprpolkitagent
+  # hyprsysteminfo
+  # hyprpanel
+  hyprshot
+  # qt6ct-kde
+  swww
+  # hyprland-qt-support
+  # hyprland-qtutils
+)
+
+dnf5 -y install "${pkgs[@]}"
 dnf5 -y copr disable solopasha/hyprland
 
 # this installs a package from fedora repos
