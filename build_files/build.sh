@@ -38,7 +38,7 @@ dnf5 -y install			\
 	hyprsunset			\
 	# hyprpolkitagent		\
 	# hyprsysteminfo		\
-	hyprpanel			\
+	# hyprpanel			\
 	hyprshot            \
 	# qt6ct-kde			\
     swww                \
