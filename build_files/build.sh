@@ -67,6 +67,7 @@ dnf5 install -y \
     emacs \
     fontconfig-devel \
     freetype-devel \
+    fuzzel \
     gnome-keyring \
     gnome-keyring-pam \
     ImageMagick \
