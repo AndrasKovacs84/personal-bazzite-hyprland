@@ -35,3 +35,5 @@ if [ "$CUR_DEPLOY" != "$STAMP_DEPLOY" ]; then
   mkdir -p "$(dirname "$STAMP")"
   echo "$CUR_DEPLOY" > "$STAMP"
 fi
+
+systemctl --user enable --now xwayland-satellite.service || true

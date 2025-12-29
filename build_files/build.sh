@@ -25,7 +25,7 @@ dnf5 -y copr disable erikreider/SwayNotificationCenter
 
 dnf5 -y copr enable dejan/lazygit
 dnf5 -y install lazygit
-dnf5 copr enable dejan/lazygit
+dnf5 -y copr disable dejan/lazygit
 
 # setup hyprland from COPR
 dnf5 -y copr enable solopasha/hyprland
@@ -49,6 +49,10 @@ pkgs=(
 dnf5 -y install "${pkgs[@]}"
 dnf5 -y copr disable solopasha/hyprland
 
+dnf5 -y copr enable zhangyi6324/noctalia-shell
+    dnf5 install -y cliphist gpu-screen-recorder matugen noctalia-shell quickshell
+dnf5 -y copr disable zhangyi6324/noctalia-shell
+
 # this installs a package from fedora repos
 dnf5 install -y \
     alacritty \
@@ -56,6 +60,7 @@ dnf5 install -y \
     blueman \
     bridge-utils \
     cargo \
+    cava \
     clang \
     clang-tools-extra \
     doublecmd-qt6 \
@@ -72,6 +77,7 @@ dnf5 install -y \
     meson \
     ncurses-devel \
     neovim \
+    niri \
     python3-neovim \
     ninja-build \
     pavucontrol-qt \
@@ -85,8 +91,12 @@ dnf5 install -y \
     virt-install \
     virt-manager \
     waybar \
+    wlsunset \
     wofi \
     xdg-desktop-portal-hyprland \
+    xdg-desktop-portal-gtk \
+    xdg-desktop-portal-gnome \
+    xwayland-satellite \
     zathura \
     zathura-plugins-all
 
