@@ -53,19 +53,11 @@ dnf5 -y copr enable zhangyi6324/noctalia-shell
     dnf5 install -y cliphist gpu-screen-recorder matugen noctalia-shell quickshell
 dnf5 -y copr disable zhangyi6324/noctalia-shell
 
-# --- Brave repo (Fedora / Atomic-friendly) ---
-curl -fsSLo /etc/yum.repos.d/brave-browser.repo \
-  https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-
-# optional: import key explicitly (repo has gpgkey=... but this makes failure modes clearer)
-rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-
 # this installs a package from fedora repos
 dnf5 install -y \
     alacritty \
     bear \
     blueman \
-    brave-browser \
     bridge-utils \
     cargo \
     cava \
@@ -155,3 +147,19 @@ rm -rf "${TMP_DIR}"
 
 # enable for all users
 systemctl --global enable post-install.service
+
+# ------------------------------------------------------------------
+# niri portals override:
+# - keep GNOME portal (screencast)
+# - force FileChooser to GTK (avoid Nautilus dependency)
+# ------------------------------------------------------------------
+install -d /etc/xdg/xdg-desktop-portal
+
+cat > /etc/xdg/xdg-desktop-portal/niri-portals.conf <<'EOF'
+[preferred]
+default=gnome;gtk;
+org.freedesktop.impl.portal.Access=gtk;
+org.freedesktop.impl.portal.Notification=gtk;
+org.freedesktop.impl.portal.Secret=gnome-keyring;
+org.freedesktop.impl.portal.FileChooser=gtk;
+EOF
