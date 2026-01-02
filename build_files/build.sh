@@ -53,11 +53,15 @@ dnf5 -y copr enable zhangyi6324/noctalia-shell
     dnf5 install -y cliphist gpu-screen-recorder matugen noctalia-shell quickshell
 dnf5 -y copr disable zhangyi6324/noctalia-shell
 
+# --- Brave Browser repo ---
+dnf5 -y install https://brave-browser-rpm-release.s3.brave.com/brave-browser-release.x86_64.rpm
+
 # this installs a package from fedora repos
 dnf5 install -y \
     alacritty \
     bear \
     blueman \
+    brave-browser \
     bridge-utils \
     cargo \
     cava \
