@@ -74,6 +74,7 @@ dnf5 install -y \
     kitty \
     libcurl-devel \
     libsecret \
+    '*/libsoup-2.4.so.1' \
     llvm \
     meson \
     ncurses-devel \
