@@ -82,6 +82,7 @@ dnf5 install -y \
     python3-neovim \
     ninja-build \
     pavucontrol-qt \
+    podman-compose \
     python3.11 \
     python3.11-devel \
     readline-devel \
