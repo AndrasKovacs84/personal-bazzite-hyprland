@@ -59,7 +59,6 @@ dnf5 install -y \
     bear \
     blueman \
     bridge-utils \
-    cargo \
     cava \
     clang \
     clang-tools-extra \
@@ -87,7 +86,6 @@ dnf5 install -y \
     python3.11-devel \
     readline-devel \
     ripgrep \
-    rust \
     splix \
     stow \
     virt-install \
