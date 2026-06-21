@@ -71,7 +71,6 @@ dnf5 install -y \
     waybar \
     wlsunset \
     wofi \
-    xdg-desktop-portal-hyprland \
     xdg-desktop-portal-gtk \
     xdg-desktop-portal-gnome \
     xwayland-satellite \
