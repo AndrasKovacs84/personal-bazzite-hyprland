@@ -27,28 +27,6 @@ dnf5 -y copr enable dejan/lazygit
 dnf5 -y install lazygit
 dnf5 -y copr disable dejan/lazygit
 
-# setup hyprland from COPR
-dnf5 -y copr enable solopasha/hyprland
-pkgs=(
-  hyprland
-  hyprpaper
-  hyprpicker
-  hypridle
-  hyprlock
-  hyprsunset
-  # hyprpolkitagent
-  # hyprsysteminfo
-  # hyprpanel
-  hyprshot
-  # qt6ct-kde
-  swww
-  # hyprland-qt-support
-  # hyprland-qtutils
-)
-
-dnf5 -y install "${pkgs[@]}"
-dnf5 -y copr disable solopasha/hyprland
-
 dnf5 -y copr enable zhangyi6324/noctalia-shell
     dnf5 install -y cliphist gpu-screen-recorder matugen noctalia-shell quickshell
 dnf5 -y copr disable zhangyi6324/noctalia-shell
