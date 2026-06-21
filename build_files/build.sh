@@ -27,9 +27,9 @@ dnf5 -y copr enable dejan/lazygit
 dnf5 -y install lazygit
 dnf5 -y copr disable dejan/lazygit
 
-dnf5 -y copr enable zhangyi6324/noctalia-shell
-    dnf5 install -y cliphist gpu-screen-recorder matugen noctalia-shell
-dnf5 -y copr disable zhangyi6324/noctalia-shell
+dnf5 -y copr enable lionheartp/Hyprland
+    dnf5 install -y cliphist gpu-screen-recorder matugen noctalia-git
+dnf5 -y copr disable lionheartp/Hyprland
 
 # this installs a package from fedora repos
 dnf5 install -y \
