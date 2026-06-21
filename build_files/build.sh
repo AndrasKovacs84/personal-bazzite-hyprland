@@ -27,14 +27,14 @@ dnf5 -y copr enable dejan/lazygit
 dnf5 -y install lazygit
 dnf5 -y copr disable dejan/lazygit
 
-dnf5 -y copr enable lionheartp/Hyprland
-dnf5 install -y \
-    cliphist \
-    gpu-screen-recorder \
-    matugen \
-    noctalia-git \
-    xdg-desktop-portal-hyprland
-dnf5 -y copr disable lionheartp/Hyprland
+# dnf5 -y copr enable lionheartp/Hyprland
+# dnf5 install -y \
+#     cliphist \
+#     gpu-screen-recorder \
+#     matugen \
+#     noctalia-git \
+#     xdg-desktop-portal-hyprland
+# dnf5 -y copr disable lionheartp/Hyprland
 
 # this installs a package from fedora repos
 dnf5 install -y \
